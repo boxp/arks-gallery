@@ -1,5 +1,4 @@
-(ns arks-gallery-server.app.resolvers
-  (:require [com.stuartsierra.component :as component]))
+(ns arks-gallery-server.app.resolvers)
 
 (def authors [{:id 1 :firstName "Tom" :lastName "Coleman"}
               {:id 2 :firstName "Sashiko" :lastName "Stubailo"}])

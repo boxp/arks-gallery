@@ -5,8 +5,7 @@
   :min-lein-version "2.7.1"
 
   :dependencies [[org.clojure/clojure "1.9.0"]
-                 [org.clojure/clojurescript "1.9.946"]
-                 [com.stuartsierra/component "0.3.2"]]
+                 [org.clojure/clojurescript "1.9.946"]]
 
   :plugins [[lein-cljsbuild "1.1.7" :exclusions [[org.clojure/clojure]]]
             [lein-figwheel "0.5.13"]]
@@ -21,7 +20,7 @@
               :source-paths ["src" "dev"]
               :figwheel true
               :compiler {
-                :main arks-gallery-server.system
+                :main cljs.user
                 :asset-path "target/js/compiled/dev"
                 :output-to "target/js/compiled/arks_gallery_server.js"
                 :output-dir "target/js/compiled/dev"
@@ -39,6 +38,7 @@
              {:id "prod"
               :source-paths ["src"]
               :compiler {
+                :main arks-gallery-server.app.server
                 :output-to "index.js"
                 :target :nodejs
                 :optimizations :simple}}]}

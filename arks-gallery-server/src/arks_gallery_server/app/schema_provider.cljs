@@ -1,6 +1,5 @@
 (ns arks-gallery-server.app.schema-provider
-  (:require [com.stuartsierra.component :as component]
-            [graphql-tools :refer [makeExcutableSchema]]
+  (:require [graphql-tools :refer [makeExecutableSchema]]
             [arks-gallery-server.app.resolvers :refer [resolve-functions]]))
 
 (def schema "
@@ -29,15 +28,6 @@ type Mutation {
 }
 ")
 
-(defrecord AppSchemaProviderComponent [excutable-schema]
-  component/Lifecycle
-  (start [this]
-    ;; this)
-    (try
-      (-> this
-          (assoc :excutable-schema (makeExcutableSchema #js{"typeDefs" schema
-                                                            "resolvers" resolve-functions})))
-      (catch Exception e (do (println e) this))))
-  (stop [this]
-    (-> this
-        (dissoc :excutable-schema))))
+(def executable-schema
+  (makeExecutableSchema #js{"typeDefs" schema
+                           "resolvers" resolve-functions}))
