@@ -1,5 +1,6 @@
 {
   "functions": {
-    "region": "asia-northeast1-a"
+    "region": "asia-northeast1-a",
+    "source": "."
   }
 }
