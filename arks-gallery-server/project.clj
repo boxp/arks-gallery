@@ -15,12 +15,15 @@
   :clean-targets ["index.js"
                   "target"]
 
+  :figwheel {
+    :reload-clj-files {:clj true}
+  }
+
   :cljsbuild {
     :builds [{:id "dev"
               :source-paths ["src" "dev"]
               :figwheel {
                 :on-jsload "cljs.user/reload"
-                :reload-clj-files {:clj true}
               }
               :compiler {
                 :main cljs.user
