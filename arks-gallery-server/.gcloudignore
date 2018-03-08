@@ -14,4 +14,16 @@
 .gitignore
 
 node_modules
-#!include:.gitignore
+
+/classes/
+/lib/
+/node_modules/
+/target/
+*.jar
+.lein-deps-sum
+.lein-repl-history
+.lein-plugins/
+.nrepl-port
+figwheel_server.log
+pom.xml
+.cljs_rhino_repl

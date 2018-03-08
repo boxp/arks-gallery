@@ -9,3 +9,5 @@
 .nrepl-port
 figwheel_server.log
 pom.xml
+.cljs_rhino_repl
+index.js
