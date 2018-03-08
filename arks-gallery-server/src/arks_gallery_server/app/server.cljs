@@ -13,7 +13,7 @@
           (graphqlExpress #js{"schema" executable-schema
                               "context" #js{}}))
     (.use "/graphiql"
-          (graphiqlExpress #js{"endpointURL" "/api/graphql"}))
+          (graphiqlExpress #js{"endpointURL" "/arks_gallery_server/graphql"}))
     (.use "/schema"
           (fn [req res]
             (.set res "Content-Type" "text/plain")
