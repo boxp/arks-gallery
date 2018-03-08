@@ -18,7 +18,10 @@
   :cljsbuild {
     :builds [{:id "dev"
               :source-paths ["src" "dev"]
-              :figwheel true
+              :figwheel {
+                :on-jsload "cljs.user/reload"
+                :reload-clj-files {:clj true}
+              }
               :compiler {
                 :main cljs.user
                 :asset-path "target/js/compiled/dev"

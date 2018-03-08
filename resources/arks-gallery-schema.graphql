@@ -1,0 +1,62 @@
+interface Likeable {
+	id: ID!
+}
+
+# ユーザー情報
+type User {
+	id: ID!
+	name: String!
+	ship: Ship! # 所属中のShip
+	profile_img_url: String # プロフィール画像のURL
+	following: [Follow] # フォロー中のユーザー
+	followers: [Follow] # フォローされているユーザー
+}
+
+# ユーザーが所属するShip情報
+type Ship {
+	num: Int! # Ship番号
+	name: String! # Ship名
+}
+
+# 登録した画像情報
+type Image implements Likeable {
+	id: ID!
+	name: String!
+	url: String
+	tweet_count: Int # ツイートされた数
+	comments: [Comment]! # 画像に寄せられたコメント情報
+	tags: [Tag]! # 画像に登録されたタグ情報
+	likes: [Like]! # されたいいね！の情報
+}
+
+# ユーザーから寄せられたコメント
+type Comment implements Likeable {
+	id: ID!
+	text: String!
+	reply_to: Comment # 返信先
+	likes: [Like]! # されたいいね！の情報
+}
+
+# 画像に付けるタグ情報
+type Tag {
+	id: ID!
+	name: String!
+	owner: User!
+}
+
+# いいね！
+type Like {
+	from: User! # いいね！送信元
+	to: Likeable! # いいね！送信先
+}
+
+# ユーザーのフォロー情報
+type Follow {
+	from: User! # フォローしたユーザー
+	to: User! # フォローされたユーザー
+}
+
+type Query {
+	images: [Image]
+	users: [User]
+}

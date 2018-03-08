@@ -1,33 +1,10 @@
 (ns arks-gallery-server.app.schema-provider
+  (:require-macros [arks-gallery-server.tools :refer [load-schema]])
   (:require [graphql-tools :refer [makeExecutableSchema]]
             [arks-gallery-server.app.resolvers :refer [resolve-functions]]))
 
-(def schema "
-type Author {
-  id: Int! # the ! means that every author object _must_ have an id
-  firstName: String
-  lastName: String
-  posts: [Post] # the list of Posts by this author
-}
-type Post {
-  id: Int!
-  title: String
-  author: Author
-  votes: Int
-}
-# the schema allows the following query:
-type Query {
-  posts: [Post]
-  author(id: Int!): Author
-}
-# this schema allows the following mutation:
-type Mutation {
-  upvotePost (
-    postId: Int!
-  ): Post
-}
-")
+(def schema (load-schema "../resources/arks-gallery-schema.graphql"))
 
 (def executable-schema
   (makeExecutableSchema #js{"typeDefs" schema
-                           "resolvers" resolve-functions}))
+                            "resolvers" resolve-functions}))
