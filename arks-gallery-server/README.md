@@ -9,6 +9,9 @@
 1. `lein cljsbuild once prod`
 2. `node server.js ...`
 
+# Production Deploy
+
+`./deploy.sh`
 
 # REPL Usage (Vim)
 
