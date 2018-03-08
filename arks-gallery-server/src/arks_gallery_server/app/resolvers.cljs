@@ -74,5 +74,4 @@
               :to (fn [follow]
                     (->> users
                          (filter #(= (.-to_id follow) (.-id %)))
-                         first))
-     }}))
+                         first))}}))
