@@ -1,10 +1,5 @@
-(ns arks-gallery-server.tools
+(ns arks-gallery-client.env
   (:require [environ.core :refer [env]]))
-
-(defmacro load-schema
-  [path]
-  (let [schema (slurp path)]
-    schema))
 
 (defmacro cljs-env [kw]
   (let [e (env kw)]

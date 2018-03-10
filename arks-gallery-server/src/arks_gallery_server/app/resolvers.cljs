@@ -7,7 +7,9 @@
 
 (def ships (clj->js [{:num 3 :name "ソーン"}]))
 
-(def images (clj->js [{:id 1 :name "hoge" :url "dummy" :tweet_count 0 :comment_ids [1] :tag_ids [1] :like_ids [1]}]))
+(def images (clj->js [{:id 1 :name "hoge" :width 1920 :height 1080 :placeholder_color "#fff" :url "https://dummyimage.com/1920x1080/000/fff&text=dummyimage" :tweet_count 0 :comment_ids [1] :tag_ids [1] :like_ids [1]}
+                      {:id 2 :name "hoge" :width 1920 :height 1080 :placeholder_color "#fff" :url "https://dummyimage.com/1920x1080/000/fff&text=dummyimage" :tweet_count 0 :comment_ids [1] :tag_ids [1] :like_ids [1]}
+                      {:id 3 :name "hoge" :width 1080 :height 1920 :placeholder_color "#fff" :url "https://dummyimage.com/1080x1920/000/fff&text=dummyimage" :tweet_count 0 :comment_ids [1] :tag_ids [1] :like_ids [1]}]))
 
 (def comments (clj->js [{:id 1 :text "hogehoge" :reply_to_id nil}]))
 

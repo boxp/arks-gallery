@@ -27,6 +27,9 @@ type Image implements Likeable {
 	comments: [Comment]! # 画像に寄せられたコメント情報
 	tags: [Tag]! # 画像に登録されたタグ情報
 	likes: [Like]! # されたいいね！の情報
+	height: Int! # 縦サイズ
+	width: Int! # 横サイズ
+	placeholder_color: String # プレースフォルダーの色
 }
 
 # ユーザーから寄せられたコメント
