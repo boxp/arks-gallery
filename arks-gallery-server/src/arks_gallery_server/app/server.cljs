@@ -10,7 +10,7 @@
 
 (defn server []
   (doto (express)
-    (.use (cors #js{:origin (or (cljs-env :port) "http://localhost:3450")
+    (.use (cors #js{:origin (or (cljs-env :domain) "http://localhost:3450")
                     :credentials true}))
     (.use "/graphql"
           (body-parser/json)

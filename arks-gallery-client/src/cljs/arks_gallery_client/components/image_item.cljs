@@ -2,19 +2,20 @@
   (:require [reagent.core :as reagent]
             [re-frame.core :as re-frame]))
 
-(def image-base-size
-  "36vw")
+(def image-width-size
+  "49vw")
 
 (defn image-item-view
   [image]
-  (let [width (:width image)
-        height (:height image)]
-    [:li {:style {:list-style-type "none"
-                  :width (str "calc(" image-base-size "*2*" (* 1.0 (/ width (+ width height))) ")")
-                  :height (str "calc(" image-base-size "*2*" (* 1.0 (/ height (+ width height))) ")")
+  (let [width image-width-size
+        height (str "calc(" image-width-size "*(" (:height image) "/" (:width image) "))")]
+    [:li {:style {:width width
+                  :height height
                   :background-color (or (:placeholder_color image) "#fff")
                   :background-image (str "url(" (:url image) ")")
-                  :background-size (str width "px " height "px")}}]))
+                  :background-size (str width " " height)
+                  :display "inline-block"
+                  :margin-bottom "2vw"}}]))
 
 (def image-item
   (with-meta image-item-view {}))

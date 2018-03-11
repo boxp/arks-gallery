@@ -5,7 +5,14 @@
 
 (defn image-grid-view
   [images]
-  [:ul.image-grid (map (fn [image] ^{:key image} [image-item image]) images)])
+  [:ul.image-grid {:style {:column-count 2
+                           :column-gap "10px"
+                           :column-fill "auto"
+                           :-webkit-column-count 2
+                           :-webkit-column-gap "10px"
+                           ;; :-webkit-column-fill "auto"
+                           }}
+   (map (fn [image] ^{:key image} [image-item image]) images)])
 
 (def image-grid
   (with-meta image-grid-view {}))

@@ -7,9 +7,12 @@
 
 (def ships (clj->js [{:num 3 :name "ソーン"}]))
 
-(def images (clj->js [{:id 1 :name "hoge" :width 1920 :height 1080 :placeholder_color "#fff" :url "https://dummyimage.com/1920x1080/000/fff&text=dummyimage" :tweet_count 0 :comment_ids [1] :tag_ids [1] :like_ids [1]}
-                      {:id 2 :name "hoge" :width 1920 :height 1080 :placeholder_color "#fff" :url "https://dummyimage.com/1920x1080/000/fff&text=dummyimage" :tweet_count 0 :comment_ids [1] :tag_ids [1] :like_ids [1]}
-                      {:id 3 :name "hoge" :width 1080 :height 1920 :placeholder_color "#fff" :url "https://dummyimage.com/1080x1920/000/fff&text=dummyimage" :tweet_count 0 :comment_ids [1] :tag_ids [1] :like_ids [1]}]))
+(def images (clj->js [{:id 1 :name "hoge" :width 1200 :height 1920 :placeholder_color "#fff" :url "https://firebasestorage.googleapis.com/v0/b/boxp-tk.appspot.com/o/arks-gallery-dev%2Fpso20180108_235703_011.jpg?alt=media&token=993d2f23-acd1-4706-841b-1a0408e9ff6f" :tweet_count 0 :comment_ids [1] :tag_ids [1] :like_ids [1]}
+                      {:id 2 :name "hoge" :width 1920 :height 1200 :placeholder_color "#fff" :url "https://firebasestorage.googleapis.com/v0/b/boxp-tk.appspot.com/o/arks-gallery-dev%2Fpso20180207_022451_000.jpg?alt=media&token=74069b93-50d1-4fa8-8991-927786e3b55c" :tweet_count 0 :comment_ids [1] :tag_ids [1] :like_ids [1]}
+                      {:id 3 :name "hoge" :width 2560 :height 1440 :placeholder_color "#fff" :url "https://firebasestorage.googleapis.com/v0/b/boxp-tk.appspot.com/o/arks-gallery-dev%2Fpso20180304_135339_006.jpg?alt=media&token=5affab01-59c1-449f-b483-8fe6b2798c86" :tweet_count 0 :comment_ids [1] :tag_ids [1] :like_ids [1]}
+                      {:id 4 :name "hoge" :width 1920 :height 1080 :placeholder_color "#fff" :url "https://dummyimage.com/1920x1080/000/fff&text=dummyimage" :tweet_count 0 :comment_ids [1] :tag_ids [1] :like_ids [1]}
+                      {:id 5 :name "hoge" :width 1920 :height 1080 :placeholder_color "#fff" :url "https://dummyimage.com/1920x1080/000/fff&text=dummyimage" :tweet_count 0 :comment_ids [1] :tag_ids [1] :like_ids [1]}
+                      {:id 6 :name "hoge" :width 1920 :height 1080 :placeholder_color "#fff" :url "https://dummyimage.com/1920x1080/000/fff&text=dummyimage" :tweet_count 0 :comment_ids [1] :tag_ids [1] :like_ids [1]}]))
 
 (def comments (clj->js [{:id 1 :text "hogehoge" :reply_to_id nil}]))
 
