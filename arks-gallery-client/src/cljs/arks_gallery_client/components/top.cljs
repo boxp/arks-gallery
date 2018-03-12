@@ -12,7 +12,10 @@
                                :url
                                :width
                                :height
-                               :placeholder_color]]]}))
+                               :placeholder_color
+                               [:owner [:name
+                                        [:ship [:num]]
+                                        :profile_img_url]]]]]}))
 
 (defn top-view []
   (let [images (re-frame/subscribe [::subs/images])]

@@ -9,9 +9,7 @@
                            :column-gap "10px"
                            :column-fill "auto"
                            :-webkit-column-count 2
-                           :-webkit-column-gap "10px"
-                           ;; :-webkit-column-fill "auto"
-                           }}
+                           :-webkit-column-gap "1vw"}}
    (map (fn [image] ^{:key image} [image-item image]) images)])
 
 (def image-grid

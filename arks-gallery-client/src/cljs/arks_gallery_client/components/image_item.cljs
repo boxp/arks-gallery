@@ -15,7 +15,7 @@
                   :background-image (str "url(" (:url image) ")")
                   :background-size (str width " " height)
                   :display "inline-block"
-                  :margin-bottom "2vw"}}]))
+                  :margin-bottom "1vw"}}]))
 
 (def image-item
   (with-meta image-item-view {}))

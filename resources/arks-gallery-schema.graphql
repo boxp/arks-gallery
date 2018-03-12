@@ -30,6 +30,7 @@ type Image implements Likeable {
 	height: Int! # 縦サイズ
 	width: Int! # 横サイズ
 	placeholder_color: String # プレースフォルダーの色
+	owner: User! # 画像を登録したユーザー
 }
 
 # ユーザーから寄せられたコメント
@@ -38,6 +39,7 @@ type Comment implements Likeable {
 	text: String!
 	reply_to: Comment # 返信先
 	likes: [Like]! # されたいいね！の情報
+	owner: User! # 画像を登録したユーザー
 }
 
 # 画像に付けるタグ情報
