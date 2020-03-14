@@ -2,7 +2,7 @@
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [org.clojure/clojurescript "1.9.946"]
                  [reagent "0.7.0"]
-                 [re-frame "0.10.5"]
+                 [re-frame "0.12.0"]
                  [re-graph "0.1.4"]
                  [secretary "1.2.3"]
                  [environ "1.1.0"]
