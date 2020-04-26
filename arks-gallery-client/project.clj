@@ -8,7 +8,7 @@
                  [environ "1.1.0"]
                  [vincit/venia "0.2.5"]]
 
-  :plugins [[lein-cljsbuild "1.1.5"]]
+  :plugins [[lein-cljsbuild "1.1.8"]]
 
   :min-lein-version "2.5.3"
 
@@ -25,7 +25,7 @@
                    [figwheel-sidecar "0.5.13"]
                    [com.cemerick/piggieback "0.2.2"]]
     :source-paths ["src/clj" "dev"]
-    :plugins      [[lein-cljsbuild "1.1.7" :exclusions [[org.clojure/clojure]]]
+    :plugins      [[lein-cljsbuild "1.1.8" :exclusions [[org.clojure/clojure]]]
                    [lein-figwheel "0.5.13"]]}}
 
   :cljsbuild
