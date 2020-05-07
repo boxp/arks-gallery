@@ -5,7 +5,7 @@
                  [re-frame "0.10.5"]
                  [re-graph "0.1.4"]
                  [secretary "1.2.3"]
-                 [environ "1.1.0"]
+                 [environ "1.2.0"]
                  [vincit/venia "0.2.5"]]
 
   :plugins [[lein-cljsbuild "1.1.5"]]
