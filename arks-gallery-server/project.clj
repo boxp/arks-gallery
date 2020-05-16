@@ -50,7 +50,7 @@
                 :target :nodejs
                 :optimizations :simple}}]}
 
-  :profiles {:dev {:dependencies [[figwheel-sidecar "0.5.13"]
+  :profiles {:dev {:dependencies [[figwheel-sidecar "0.5.20"]
                                   [com.cemerick/piggieback "0.2.2"]]
                    :source-paths ["src" "dev"]
                    :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}}})
