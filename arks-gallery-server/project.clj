@@ -9,7 +9,7 @@
                  [environ "1.1.0"]]
 
   :plugins [[lein-cljsbuild "1.1.7" :exclusions [[org.clojure/clojure]]]
-            [lein-figwheel "0.5.13"]]
+            [lein-figwheel "0.5.20"]]
 
   :source-paths ["src"]
 

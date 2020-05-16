@@ -26,7 +26,7 @@
                    [com.cemerick/piggieback "0.2.2"]]
     :source-paths ["src/clj" "dev"]
     :plugins      [[lein-cljsbuild "1.1.7" :exclusions [[org.clojure/clojure]]]
-                   [lein-figwheel "0.5.13"]]}}
+                   [lein-figwheel "0.5.20"]]}}
 
   :cljsbuild
   {:builds
