@@ -3,7 +3,7 @@
                  [org.clojure/clojurescript "1.9.946"]
                  [reagent "0.7.0"]
                  [re-frame "0.10.5"]
-                 [re-graph "0.1.4"]
+                 [re-graph "0.2.0"]
                  [secretary "1.2.3"]
                  [environ "1.1.0"]
                  [vincit/venia "0.2.5"]]
